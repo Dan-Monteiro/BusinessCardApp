@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">BusinessCardApp</string>
-    <string name="label_business_card">Cartão de Visita</string>
+    <string name="label_business_card">Cartões de Visita</string>
+    <string name="lbl_new_businesscard">Novo Cartão Visita</string>
+    <string name="htn_name">Nome</string>
+    <string name="htn_phone">Telefone</string>
+    <string name="htn_email">Email</string>
+    <string name="htn_enterprise">Empresa</string>
+    <string name="htn_color">Cor</string>
+    <string name="txt_color_picker">Selecione a cor</string>
+    <string name="btn_save">Salvar</string>
 </resources>
