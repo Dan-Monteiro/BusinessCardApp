@@ -34,7 +34,7 @@ class BusinesscardAdapter : ListAdapter<Businesscard, BusinesscardAdapter.ViewHo
             binding.tvEmail.text = item.emailAdress
             binding.tvEnterprise.text = item.enterprise
             binding.tvPhoneNumber.text = item.phone
-            binding.cdView.setBackgroundColor(Color.parseColor("#" + java.lang.Integer.toHexString(item.backgroundColor.toInt())))
+            binding.cdView.setCardBackgroundColor(Color.parseColor("#" + java.lang.Integer.toHexString(item.backgroundColor.toInt())))
             binding.cdView.setOnClickListener{
                 listnerShare(it)
             }
