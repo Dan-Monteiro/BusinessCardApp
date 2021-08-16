@@ -2,6 +2,7 @@ package br.com.dan.businesscardapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.com.dan.businesscardapp.App
@@ -39,6 +40,15 @@ class MainActivity : AppCompatActivity() {
     private fun getAllBusinesscard(){
         mainViewModel.getAll().observe(this, {
             businessCard -> adapter.submitList(businessCard)
+            showEmptyLabel(businessCard.isEmpty())
         })
+    }
+
+    private fun showEmptyLabel(shouldShow: Boolean){
+        if(shouldShow){
+           binding.tvEmptyBusinesscardList.visibility = View.VISIBLE
+        }else{
+            binding.tvEmptyBusinesscardList.visibility = View.GONE
+        }
     }
 }

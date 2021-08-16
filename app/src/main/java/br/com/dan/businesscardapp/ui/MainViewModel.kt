@@ -16,6 +16,10 @@ class MainViewModel(private val businesscardRepository: BusinesscardRepository) 
     fun getAll(): LiveData<List<Businesscard>> {
         return businesscardRepository.getAll()
     }
+
+    fun isEmpty(): Boolean {
+        return getAll().value!!.isEmpty()
+    }
 }
 
 class MainViewModelFactory(private val businesscardRepository: BusinesscardRepository): ViewModelProvider.Factory {
